@@ -24,7 +24,6 @@ $(function () {
                 },
                 body: JSON.stringify(item) 
             })
-            .then(location.reload())
         });
 
     return false

@@ -15,7 +15,7 @@ $(function () {
             // Converter o objeto em JSON
             body: JSON.stringify(item) 
         })
-        .fetch(console.log())
+        .fetch(location.reload())
     })
 
 return false
