@@ -25,7 +25,7 @@ $(function () {
             // Converter o objeto em JSON
             body: JSON.stringify(item) 
         })
-        .fetch(location.reload())
+        .then(location.reload())
     });
     return false
 });

@@ -1,7 +1,5 @@
 $(function () {
 
-    let storage = (localStorage.produtos) ? JSON.parse(localStorage.produtos) : [];
-
     function listarAnimais() {
         fetch("http://cafepradev.com.br:21020/animals/list", {
             method: "GET",
@@ -9,12 +7,12 @@ $(function () {
                 "Content-type": "application/json; charset=UTF-8"
             }
         })
-        .then(response => response.json())
-        .then(data => {
-            $('#carregarAnimais').empty();
+            .then(response => response.json())
+            .then(data => {
+                $('#carregarAnimais').empty();
 
-            data.forEach(animais => {
-                $('#carregarAnimais').append(`
+                data.forEach(animais => {
+                    $('#carregarAnimais').append(`
                     <tr>
                         <td>${animais.id}</td>
                         <td>${animais.name}</td>
@@ -40,9 +38,9 @@ $(function () {
                                         <div class="modal-body">
                                             <form>
                                                 <div class="mb-3">
-                                                    <label for="idAtu"
-                                                        class="col-form-label">Id</label>
-                                                    <input type="text" class="form-control" id="idAtu" placeholder="Id do Animal:">
+                                                    <label for="speciesAtu"
+                                                        class="col-form-label">ID</label>
+                                                    <input type="text" class="form-control" id="idAtu" placeholder="Digite o ID do animal:">
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="nameAtu"
@@ -69,7 +67,7 @@ $(function () {
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-danger"
                                                 data-bs-dismiss="modal">Cancelar</button>
-                                            <button type="submit" class="btn btn-primary ">Atualizar</button>
+                                            <button type="submit" class="btn btn-warning">Editar</button>
                                         </div>
                                     </div>
                                 </div>
@@ -77,10 +75,10 @@ $(function () {
                         </td>
                     </tr>
                     `
-                );
-            });
-        })
-        .catch(error => console.error(error));
+                    );
+                });
+            })
+            .catch(error => console.error(error));
     }
 
 
