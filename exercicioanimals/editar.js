@@ -15,8 +15,7 @@ $(function () {
                 color: colorAtu,
                 size: sizeAtu
             };
-            console.log(item)
-    
+            
             fetch("http://cafepradev.com.br:21020/animals/update", {
                 method: "PUT",
                 headers: {
@@ -24,6 +23,7 @@ $(function () {
                 },
                 body: JSON.stringify(item) 
             })
+                console.log(fetch)
         });
 
     return false
