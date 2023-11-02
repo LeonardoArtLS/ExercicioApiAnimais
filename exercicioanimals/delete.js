@@ -15,7 +15,10 @@ $(function () {
 
             body: JSON.stringify(item) 
         })
+        setTimeout(function () {
+            location.reload();
+        }, 500)
     })
+    return false;
 
-return false
 });

@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuggles&family=Lexend:wght@100;200;300;600;900&family=Roboto:ital,wght@0,100;0,300;0,700;1,100;1,700&display=swap');
+
+body{
+    background-color: rgb(243, 243, 243);
+}
+.form-label{
+    font-family: 'Lexend', sans-serif;
+}
+#carregarAnimais{
+    font-family: 'Roboto', sans-serif;
+}

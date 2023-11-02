@@ -23,7 +23,7 @@ $(function () {
                             <a href="#" class="btn btn-danger deletaItem" rel="${animais.id}">D</a>
 
 
-                            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#Modal"
+                            <button type="button" class="btn btn-warning editarItem" rel="${animais.id}" data-bs-toggle="modal" data-bs-target="#Modal"
                                 data-bs-whatever="@getbootstrap">E</button>
 
                             <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel"
@@ -37,11 +37,6 @@ $(function () {
                                         </div>
                                         <div class="modal-body">
                                             <form>
-                                                <div class="mb-3">
-                                                    <label for="speciesAtu"
-                                                        class="col-form-label">ID</label>
-                                                    <input type="text" class="form-control" id="idAtu" placeholder="Digite o ID do animal:">
-                                                </div>
                                                 <div class="mb-3">
                                                     <label for="nameAtu"
                                                         class="col-form-label">Nome</label>
@@ -67,7 +62,7 @@ $(function () {
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-danger"
                                                 data-bs-dismiss="modal">Cancelar</button>
-                                            <button type="submit" class="btn btn-warning">Editar</button>
+                                            <button type="submit" class="btn btn-warning btnSalvarEdit">Editar</button>
                                         </div>
                                     </div>
                                 </div>
@@ -81,7 +76,7 @@ $(function () {
             .catch(error => console.error(error));
     }
 
-
     listarAnimais();
+
     return false
 });
